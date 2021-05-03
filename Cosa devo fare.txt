@@ -1,0 +1,9 @@
+cosa devo fare?
+pagina di registrazione
+pagina di login
+pagina di ordinazione
+pagina di ricezione ordini
+pagina di messaggi?
+pagina di conferma
+pagina aggiunta novità
+pagina visualizzazione novità
