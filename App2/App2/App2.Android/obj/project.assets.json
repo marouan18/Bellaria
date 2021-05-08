@@ -2251,24 +2251,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\m_inf_5h\\.nuget\\packages\\": {},
+    "C:\\Users\\ouadi\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\m_inf_5h\\Desktop\\Bellaria\\App2\\App2\\App2.Android\\App2.Android.csproj",
+      "projectUniqueName": "C:\\Users\\ouadi\\OneDrive\\Desktop\\GIt_test\\Bellaria\\App2\\App2\\App2.Android\\App2.Android.csproj",
       "projectName": "App2.Android",
-      "projectPath": "C:\\Users\\m_inf_5h\\Desktop\\Bellaria\\App2\\App2\\App2.Android\\App2.Android.csproj",
-      "packagesPath": "C:\\Users\\m_inf_5h\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\m_inf_5h\\Desktop\\Bellaria\\App2\\App2\\App2.Android\\obj\\",
+      "projectPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\GIt_test\\Bellaria\\App2\\App2\\App2.Android\\App2.Android.csproj",
+      "packagesPath": "C:\\Users\\ouadi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\GIt_test\\Bellaria\\App2\\App2\\App2.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\m_inf_5h\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ouadi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2282,8 +2282,8 @@
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "C:\\Users\\m_inf_5h\\Desktop\\Bellaria\\App2\\App2\\App2\\App2.csproj": {
-              "projectPath": "C:\\Users\\m_inf_5h\\Desktop\\Bellaria\\App2\\App2\\App2\\App2.csproj"
+            "C:\\Users\\ouadi\\OneDrive\\Desktop\\GIt_test\\Bellaria\\App2\\App2\\App2\\App2.csproj": {
+              "projectPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\GIt_test\\Bellaria\\App2\\App2\\App2\\App2.csproj"
             }
           }
         }
