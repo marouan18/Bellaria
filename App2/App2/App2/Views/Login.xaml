@@ -2,7 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:helpers="clr-namespace:App2.Helpers"
-             x:Class="App2.Views.Login">
+             xmlns:vm="clr-namespace:App2.ViewModel"
+             x:Class="App2.Views.Login"
+             Visual="Material">
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid Padding="20" VerticalOptions="Center">
             <Grid.RowDefinitions>
@@ -16,13 +21,15 @@
                        TextColor="Purple" FontSize="40" HorizontalOptions="Center"/>
             </StackLayout>
             <StackLayout Grid.Row="1" Spacing="10">
-                <Entry Placeholder="Enteru" Text="{Binding username}"/>
-                <Entry Placeholder="Enterp" Text="{Binding password}" IsPassword="True"/>
+                <Entry Placeholder="Enteru" Text="{Binding Username}"/>
+                <Entry Placeholder="Enterp" Text="{Binding Password}" IsPassword="True"/>
                 <Button Text="Login" HorizontalOptions="Center" BackgroundColor="Purple"
-                        TextColor="White" WidthRequest="200" HeightRequest="60" CornerRadius="20"/>
+                        TextColor="White" WidthRequest="200" HeightRequest="60" CornerRadius="20"
+                        Command="{Binding LoginCommand}"/>
                 <Label Text="New Users :"/>
                 <Button Text="Register"  HorizontalOptions="Center" BackgroundColor="DarkOrange"
-                        TextColor="White" WidthRequest="200" HeightRequest="60" CornerRadius="20"/>
+                        TextColor="White" WidthRequest="200" HeightRequest="60" CornerRadius="20"
+                        Command="{Binding RegisterCommand}"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>
