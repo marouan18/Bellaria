@@ -29,3 +29,4 @@ C:\Users\ouadi\OneDrive\Desktop\GIt_test\Bellaria\App2\App2\App2\obj\Debug\netst
 C:\Users\ouadi\OneDrive\Desktop\GIt_test\Bellaria\App2\App2\App2\obj\Debug\netstandard2.0\ref\App2.dll
 C:\Users\ouadi\OneDrive\Desktop\GIt_test\Bellaria\App2\App2\App2\obj\Debug\netstandard2.0\App2.pdb
 C:\Users\ouadi\OneDrive\Desktop\GIt_test\Bellaria\App2\App2\App2\obj\Debug\netstandard2.0\Views\ProductsView.xaml.g.cs
+C:\Users\ouadi\OneDrive\Desktop\GIt_test\Bellaria\App2\App2\App2\obj\Debug\netstandard2.0\Views\SettingsPage.xaml.g.cs

@@ -14,12 +14,12 @@ namespace App2.ViewModel
         {
             set
             {
-                this._Username = value;
+                _Username = value;
                 OnPropertyChanged();
             }
             get
             {
-                return this._Username;
+                return _Username;
             }
         }
 
@@ -28,12 +28,12 @@ namespace App2.ViewModel
         {
             set
             {
-                this._Password = value;
+                _Password = value;
                 OnPropertyChanged();
             }
             get
             {
-                return this._Password;
+                return _Password;
             }
         }
 
@@ -43,12 +43,12 @@ namespace App2.ViewModel
         {
             set
             {
-                this._IsBusy = value;
+                _IsBusy = value;
                 OnPropertyChanged();
             }
             get
             {
-                return this._IsBusy;
+                return _IsBusy;
             }
         }
 
@@ -57,12 +57,12 @@ namespace App2.ViewModel
         {
             set
             {
-                this._Result = value;
+                _Result = value;
                 OnPropertyChanged();
             }
             get
             {
-                return this._Result;
+                return _Result;
             }
         }
 
@@ -71,13 +71,13 @@ namespace App2.ViewModel
         {
             set
             {
-                this._Disable = value;
+                _Disable = value;
                 OnPropertyChanged();
             }
 
             get
             {
-                return this._Disable;
+                return _Disable;
             }
         }
 

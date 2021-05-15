@@ -12,7 +12,8 @@ namespace App2
             InitializeComponent();
 
             // MainPage = new MainPage();
-            MainPage = new Login();
+            // MainPage = new Login();
+            MainPage = new NavigationPage(new SettingsPage());
         }
 
         protected override void OnStart()
