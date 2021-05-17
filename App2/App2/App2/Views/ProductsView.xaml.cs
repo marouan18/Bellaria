@@ -16,5 +16,10 @@ namespace App2.Views
         {
             InitializeComponent();
         }
+
+        private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+           
+        }
     }
 }

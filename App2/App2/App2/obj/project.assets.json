@@ -1800,25 +1800,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\m_inf_5h\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\ouadi\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\m_inf_5h\\Desktop\\Bellaria-main\\App2\\App2\\App2\\App2.csproj",
+      "projectUniqueName": "C:\\Users\\ouadi\\OneDrive\\Desktop\\GIt_test\\Bellaria\\App2\\App2\\App2\\App2.csproj",
       "projectName": "App2",
-      "projectPath": "C:\\Users\\m_inf_5h\\Desktop\\Bellaria-main\\App2\\App2\\App2\\App2.csproj",
-      "packagesPath": "C:\\Users\\m_inf_5h\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\m_inf_5h\\Desktop\\Bellaria-main\\App2\\App2\\App2\\obj\\",
+      "projectPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\GIt_test\\Bellaria\\App2\\App2\\App2\\App2.csproj",
+      "packagesPath": "C:\\Users\\ouadi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\GIt_test\\Bellaria\\App2\\App2\\App2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\m_inf_5h\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ouadi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1890,7 +1888,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -13,7 +13,7 @@ namespace App2.Services
         FirebaseClient client;
         public CategoryDataService()
         {
-            client = new FirebaseClient("");
+            client = new FirebaseClient("https://bellaria-10f58-default-rtdb.europe-west1.firebasedatabase.app/");
         }
         public async Task<List<Category>> GetCategoriesAsync()
         {

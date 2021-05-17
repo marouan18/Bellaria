@@ -44,3 +44,5 @@ C:\Users\m_inf_5h\Desktop\Bellaria-main\App2\App2\App2\obj\Debug\netstandard2.0\
 C:\Users\m_inf_5h\Desktop\Bellaria-main\App2\App2\App2\obj\Debug\netstandard2.0\App2.dll
 C:\Users\m_inf_5h\Desktop\Bellaria-main\App2\App2\App2\obj\Debug\netstandard2.0\ref\App2.dll
 C:\Users\m_inf_5h\Desktop\Bellaria-main\App2\App2\App2\obj\Debug\netstandard2.0\App2.pdb
+C:\Users\ouadi\OneDrive\Desktop\GIt_test\Bellaria\App2\App2\App2\obj\Debug\netstandard2.0\Views\CartView.xaml.g.cs
+C:\Users\ouadi\OneDrive\Desktop\GIt_test\Bellaria\App2\App2\App2\obj\Debug\netstandard2.0\Views\LogoutView.xaml.g.cs

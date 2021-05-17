@@ -10,12 +10,14 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Grid Margin="20,0,0,0"><!--margini definiti da left, top, right e bottom.-->
+            <Grid Margin="20,0,0,0">
+                <!--margini definiti da left, top, right e bottom.-->
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/> <!-- * entire available space-->
+                    <RowDefinition Height="*"/>
+                    <!-- * entire available space-->
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
                     <Grid.RowDefinitions>
@@ -49,7 +51,7 @@
                         Glyph={x:Static helpers:IconFont.Logout}, Size=40, Color=Red}"
                                   Margin="0,0,10,0" HorizontalOptions="End"
                                  Command="{Binding LogoutCommand}"/>
-                    
+
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="0">
                     <Grid.ColumnDefinitions>
@@ -74,9 +76,12 @@
                                 Grid.Row="2">
                     <!-- ITEMSLAYOUT COME MOSTRO LE IMMAGINI? ORIZZONTALMENTE  -->
                     <CollectionView.ItemTemplate>
-                        <DataTemplate> <!-- qui gestisce la listview-->
-                            <StackLayout Padding="0,0,15,0"> <!-- spazio con i childs-->
-                                <Frame HeightRequest="50" HasShadow="False" BackgroundColor="#feeee8" CornerRadius="10"><!-- frame è la cornice-->
+                        <DataTemplate>
+                            <!-- qui gestisce la listview-->
+                            <StackLayout Padding="0,0,15,0">
+                                <!-- spazio con i childs-->
+                                <Frame HeightRequest="50" HasShadow="False" BackgroundColor="#feeee8" CornerRadius="10">
+                                    <!-- frame è la cornice-->
                                     <Image Source="{Binding ImageUrl}" />
                                 </Frame>
                                 <Label Text="{Binding CategoryName}" HorizontalTextAlignment="Center"/>
@@ -104,7 +109,8 @@
                                     <Frame Grid.Row="1" Margin="20,-80,20,70" BackgroundColor="White" CornerRadius="15"
                                            HorizontalOptions="End">
                                         <Label Text="{Binding Price, StringFormat='{0:c}'}" FontSize="Medium"
-                                               FontAttributes="Bold" TextColor="Black" HeightRequest="10"/><!-- c sta per currency-->
+                                               FontAttributes="Bold" TextColor="Black" HeightRequest="10"/>
+                                        <!-- c sta per currency-->
                                     </Frame>
                                     <Label Grid.Row="1" Text="{Binding Name}" FontSize="22" FontAttributes="Bold"
                                            VerticalTextAlignment="Center"/>
@@ -113,7 +119,7 @@
                                         <Label.FormattedText>
                                             <FormattedString>
                                                 <Span Text="{Binding Rating}" FontAttributes="Bold"/>
-                                                <Span Text="{Binding Description}" FontAttributes="#a4a7b6"/>
+                                                <Span Text="{Binding Description}" TextColor="#a4a7b6"/>
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>
@@ -123,7 +129,7 @@
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </Grid>
-          
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
