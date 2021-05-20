@@ -14,13 +14,13 @@ namespace App2
 
             // MainPage = new MainPage();
             // MainPage = new Login();
-              MainPage = new NavigationPage(new SettingsPage());
-            /*  string uname = Preferences.Get("Username", String.Empty);
+             // MainPage = new NavigationPage(new SettingsPage());
+              string uname = Preferences.Get("Username", String.Empty);
               if (String.IsNullOrEmpty(uname))
                   MainPage = new LogoutView();
               else
                   MainPage = new ProductsView();
-          */
+          
         
         }
 
