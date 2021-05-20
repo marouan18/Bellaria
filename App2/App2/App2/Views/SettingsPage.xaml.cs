@@ -29,5 +29,14 @@ namespace App2.Views
             var afd = new AddFoodItemsData();
             await afd.AddFoodItemAsync();
         }
+
+        private void ButtonCart_Clicked(object sender, EventArgs e)
+        {
+            var cct = new CreateCartTable();
+            if (cct.CreateTable())
+                DisplayAlert("Success", "Cart Table Created", "Ok");
+            else
+                DisplayAlert("Error", "Error while creating table", "Ok");
+        }
     }
 }

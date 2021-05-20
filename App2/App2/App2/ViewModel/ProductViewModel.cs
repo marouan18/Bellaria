@@ -19,6 +19,7 @@ namespace App2.ViewModel
             set
             {
                 _UserName = value;
+                OnPropertyChanged();
             }
             get { return _UserName; }
         }
@@ -28,6 +29,7 @@ namespace App2.ViewModel
             set
             {
                 _UserCartItemsCount = value;
+                OnPropertyChanged();
             }
             get { return _UserCartItemsCount; }
         }
