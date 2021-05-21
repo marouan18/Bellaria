@@ -68,3 +68,10 @@ C:\Users\m_inf_5h\Desktop\Bellaria-main\Bellaria\App2\App2\App2\bin\Debug\netsta
 C:\Users\m_inf_5h\Desktop\Bellaria-main\Bellaria\App2\App2\App2\bin\Debug\netstandard2.0\ref\App2.dll
 C:\Users\m_inf_5h\Desktop\Bellaria-main\Bellaria\App2\App2\App2\bin\Debug\netstandard2.0\App2.pdb
 C:\Users\m_inf_5h\Desktop\Bellaria-main\Bellaria\App2\App2\App2\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\m_inf_5H\Desktop\Bellaria\App2\App2\App2\obj\Debug\netstandard2.0\Views\CartView.xaml.g.cs
+C:\Users\m_inf_5H\Desktop\Bellaria\App2\App2\App2\obj\Debug\netstandard2.0\Views\CategoryView.xaml.g.cs
+C:\Users\m_inf_5H\Desktop\Bellaria\App2\App2\App2\obj\Debug\netstandard2.0\Views\LogoutView.xaml.g.cs
+C:\Users\m_inf_5H\Desktop\Bellaria\App2\App2\App2\obj\Debug\netstandard2.0\Views\OrdersView.xaml.g.cs
+C:\Users\m_inf_5H\Desktop\Bellaria\App2\App2\App2\obj\Debug\netstandard2.0\Views\ProductDetailsView.xaml.g.cs
+C:\Users\m_inf_5H\Desktop\Bellaria\App2\App2\App2\obj\Debug\netstandard2.0\Views\ProductsView.xaml.g.cs
+C:\Users\m_inf_5H\Desktop\Bellaria\App2\App2\App2\obj\Debug\netstandard2.0\Views\SettingsPage.xaml.g.cs

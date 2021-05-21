@@ -29,6 +29,8 @@
           Value="FontAwesome5Regular.otf#Regular" />
 
             </OnPlatform>
+
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
