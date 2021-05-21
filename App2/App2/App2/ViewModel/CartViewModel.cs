@@ -40,9 +40,9 @@ namespace App2.ViewModel
 
         private async Task PlaceOrdersAsync()
         {
-            var id = await new OrderService().PlaceOrderAsync() as string;
+            /*var id = await new OrderService().PlaceOrderAsync() as string;
             RemoveItemsFromCart();
-            await Application.Current.MainPage.Navigation.PushModalAsync(new Ordersview(id));
+            await Application.Current.MainPage.Navigation.PushModalAsync(new Ordersview(id));*/
         }
         private void RemoveItemsFromCart()
         {

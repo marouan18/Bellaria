@@ -11,7 +11,7 @@
         <vm:CartViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <Grid BackgroundColor="{AppThemeBinding Light={StaticResource LightSecondaryBackgroundColor}, Dark={StaticResource DarkSecondaryBackgroundColor}}">
+        <Grid >
             <Grid.RowDefinitions>
                 <RowDefinition Height="100" />
                 <RowDefinition Height="*" />
@@ -33,10 +33,10 @@
                 Grid.Row="0" HorizontalOptions="Start" Aspect="AspectFit"
                 VerticalOptions="Start" Margin="10,30" Clicked="ImageButton_Clicked" />
 
-            <pancake:PancakeView Grid.Row="1" BackgroundColor="{AppThemeBinding Light={StaticResource LightInnerBackgroundColor}, Dark={StaticResource DarkInnerBackgroundColor}}"
+            <pancake:PancakeView Grid.Row="1" 
                                  CornerRadius="60,60,0,0">
                 <ListView x:Name="ListViewCartItems" Margin="20"
-                          SeparatorVisibility="None" BackgroundColor="{AppThemeBinding Light={StaticResource LightInnerBackgroundColor}, Dark={StaticResource DarkInnerBackgroundColor}}"
+                          SeparatorVisibility="None" 
                           ItemsSource="{Binding CartItems}"
                           Header="" HasUnevenRows="True">
                     <ListView.HeaderTemplate>
@@ -50,19 +50,19 @@
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
                                 <Label Text="Id" Grid.Column="0" FontSize="Subtitle"
-                                       TextColor="{AppThemeBinding Light={StaticResource LightPrimaryTextColor}, Dark={StaticResource DarkPrimaryTextColor}}"
+                                       
                                        />
                                 <Label Text="Name" Grid.Column="1" FontSize="Subtitle"
-                                       TextColor="{AppThemeBinding Light={StaticResource LightPrimaryTextColor}, Dark={StaticResource DarkPrimaryTextColor}}"
+                                       
                                        />
                                 <Label Text="Price" Grid.Column="2" FontSize="Subtitle"
-                                       TextColor="{AppThemeBinding Light={StaticResource LightPrimaryTextColor}, Dark={StaticResource DarkPrimaryTextColor}}"
+                                     
                                        HorizontalTextAlignment="Center"/>
                                 <Label Text="Qty" Grid.Column="3" FontSize="Subtitle"
-                                       TextColor="{AppThemeBinding Light={StaticResource LightPrimaryTextColor}, Dark={StaticResource DarkPrimaryTextColor}}"
+                                       
                                        HorizontalTextAlignment="Center"/>
                                 <Label Text="Cost" Grid.Column="4" FontSize="Subtitle"
-                                       TextColor="{AppThemeBinding Light={StaticResource LightPrimaryTextColor}, Dark={StaticResource DarkPrimaryTextColor}}"
+                                       
                                        HorizontalOptions="Center"/>
                             </Grid>
                         </DataTemplate>
@@ -82,19 +82,19 @@
                                         </Grid.ColumnDefinitions>
 
                                         <Label Text="{Binding ProductId}" Grid.Column="0" FontSize="Body"
-                                       TextColor="{AppThemeBinding Light={StaticResource LightContextTextColor}, Dark={StaticResource DarkContextTextColor}}"
+                                   
                                                />
                                         <Label Text="{Binding ProductName}" Grid.Column="1" FontSize="Body"
-                                       TextColor="{AppThemeBinding Light={StaticResource LightContextTextColor}, Dark={StaticResource DarkContextTextColor}}" />
+                                  />
 
                                         <Label Text="{Binding Price}" Grid.Column="2" FontSize="Body"
-                                       TextColor="{AppThemeBinding Light={StaticResource LightContextTextColor}, Dark={StaticResource DarkContextTextColor}}"
+                                    
                                                />
                                         <Label Text="{Binding Quantity}" Grid.Column="3" FontSize="Body"
-                                       TextColor="{AppThemeBinding Light={StaticResource LightContextTextColor}, Dark={StaticResource DarkContextTextColor}}"
+                                      
                                                />
                                         <Label Text="{Binding Cost}" Grid.Column="4" FontSize="Body"
-                                       TextColor="{AppThemeBinding Light={StaticResource LightContextTextColor}, Dark={StaticResource DarkContextTextColor}}"
+                                      
                                               />
                                     </Grid>
                                 </ViewCell.View>
@@ -106,12 +106,12 @@
 
             <Label Text="{Binding TotalCost, StringFormat='Total Cost : {0:c}'}"
                    Grid.Row="2" HorizontalTextAlignment="End" FontSize="Subtitle"
-                   TextColor="{AppThemeBinding Light={StaticResource LightPrimaryTextColor}, Dark={StaticResource DarkPrimaryTextColor}}" />
+              />
 
             <Button Text="Place Order" Grid.Row="3" TextColor="White"
                     Command="{Binding PlaceOrdersCommand}"
                     HorizontalOptions="Center" CornerRadius="20"
-                    BackgroundColor="{AppThemeBinding Light={StaticResource LightDefaultButtonColor}, Dark={StaticResource DarkDefaultButtonColor}}"/>
+                 />
 
         </Grid>
     </ContentPage.Content>

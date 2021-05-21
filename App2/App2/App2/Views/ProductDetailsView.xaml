@@ -31,17 +31,17 @@
                          VerticalOptions="Start">
                 <StackLayout Orientation="Horizontal" Spacing="10">
                     <Label Text="Product ID: " FontSize="Subtitle"
-                           TextColor="{AppThemeBinding Light={StaticResource LightPrimaryTextColor}, Dark={StaticResource DarkPrimaryTextColor}}"
+
                            />
                     <Label Text="{Binding SelectedFoodItem.ProductID}"
                            FontSize="Subtitle"
-                           TextColor="{AppThemeBinding Light={StaticResource LightSecondaryTextColor}, Dark={StaticResource DarkSecondaryTextColor}}"
+               
                           />
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Spacing="10">
                     <Label Text="Product Name: " FontSize="Subtitle"
-                           TextColor="{AppThemeBinding Light={StaticResource LightPrimaryTextColor}, Dark={StaticResource DarkPrimaryTextColor}}"/>
+                       
                     <Label Text="{Binding SelectedFoodItem.Name}"
                            FontSize="Subtitle"
                            TextColor="{AppThemeBinding Light={StaticResource LightSecondaryTextColor}, Dark={StaticResource DarkSecondaryTextColor}}"/>

@@ -1,5 +1,5 @@
 ﻿using System;
-namespace DemoApp.Helpers
+namespace App2.Helpers
 {
 	static class IconFont
 	{

@@ -18,7 +18,9 @@ namespace App2.Views
             InitializeComponent();
         }
 
-        private async Task CollectionView_SelectionChangedAsync(object sender, SelectionChangedEventArgs e)
+
+
+        private async void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var category = e.CurrentSelection.FirstOrDefault() as Category;
             if (category == null)
