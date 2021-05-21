@@ -83,13 +83,12 @@
                        HorizontalTextAlignment="Center"
                        VerticalOptions="Center" FontSize="30"/>
 
-                <pancake:PancakeView BackgroundColor="Yellow" Grid.Column="1" CornerRadius="20,20,20,20"  >
+                <pancake:PancakeView  Grid.Column="1" >
                     <Entry Text="{Binding TotalQuantity}"
                        HorizontalTextAlignment="Center"
-                       VerticalOptions="Center" FontSize="30"
+                        FontSize="30"
                        WidthRequest="40"
-                       BackgroundColor="Transparent"
-                       />
+                       BackgroundColor="Transparent" />
                 </pancake:PancakeView>
 
                 <Button Text="+" FontSize="30" TextColor="White"
