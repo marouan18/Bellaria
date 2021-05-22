@@ -37,17 +37,10 @@ namespace App2.ViewModel
             LoadItems();
             PlaceOrdersCommand = new Command(async () => await PlaceOrdersAsync());
         }
-
         private async Task PlaceOrdersAsync()
         {
-            /*var id = await new OrderService().PlaceOrderAsync() as string;
-            RemoveItemsFromCart();
-            await Application.Current.MainPage.Navigation.PushModalAsync(new Ordersview(id));*/
-        }
-        private void RemoveItemsFromCart()
-        {
-            var cis = new CartItemService();
-            cis.RemoveItemsFromCart();
+            var orderService = new OrderService();
+            await orderService.PlaceOrderAsync();
         }
         private void LoadItems()
         {

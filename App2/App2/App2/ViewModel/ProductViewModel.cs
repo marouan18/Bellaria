@@ -21,8 +21,13 @@ namespace App2.ViewModel
                 _UserName = value;
                 OnPropertyChanged();
             }
-            get { return _UserName; }
+
+            get
+            {
+                return _UserName;
+            }
         }
+
         private int _UserCartItemsCount;
         public int UserCartItemsCount
         {
@@ -31,32 +36,66 @@ namespace App2.ViewModel
                 _UserCartItemsCount = value;
                 OnPropertyChanged();
             }
-            get { return _UserCartItemsCount; }
+
+            get
+            {
+                return _UserCartItemsCount;
+            }
         }
 
+        private string _SearchText;
+        public string SearchText
+        {
+            set
+            {
+                _SearchText = value;
+                OnPropertyChanged();
+            }
+
+            get
+            {
+                return _SearchText;
+            }
+        }
         public ObservableCollection<Category> Categories { get; set; }
         public ObservableCollection<FoodItem> LatestItems { get; set; }
-        public Command ViewcartCommand { get; set; }
+
+        public Command ViewCartCommand { get; set; }
         public Command LogoutCommand { get; set; }
+        public Command ViewOrdersHistoryCommand { get; set; }
+        public Command SearchViewCommand { get; set; }
+
         public ProductViewModel()
         {
             var uname = Preferences.Get("Username", String.Empty);
             if (String.IsNullOrEmpty(uname))
-                UserName = "guest";
+                UserName = "Guest";
             else
                 UserName = uname;
+
             UserCartItemsCount = new CartItemService().GetUsercartCount();
+
             Categories = new ObservableCollection<Category>();
             LatestItems = new ObservableCollection<FoodItem>();
-            ViewcartCommand = new Command(async () => await ViewCartAsync());
+
+            ViewCartCommand = new Command(async () => await ViewCartAsync());
             LogoutCommand = new Command(async () => await LogoutAsync());
+            ViewOrdersHistoryCommand = new Command(async () => await ViewOrderHistoryAsync());
+            SearchViewCommand = new Command(async () => await SearchViewAsync());
+
             GetCategories();
             GetLatestItems();
         }
 
-        private async Task LogoutAsync()
+        private async Task SearchViewAsync()
         {
-            await Application.Current.MainPage.Navigation.PushModalAsync(new LogoutView());
+            await Application.Current.MainPage.Navigation.PushModalAsync(
+                new SearchResultsView(SearchText));
+        }
+
+        private async Task ViewOrderHistoryAsync()
+        {
+            await Application.Current.MainPage.Navigation.PushModalAsync(new OrdersHistoryView());
         }
 
         private async Task ViewCartAsync()
@@ -64,11 +103,16 @@ namespace App2.ViewModel
             await Application.Current.MainPage.Navigation.PushModalAsync(new CartView());
         }
 
+        private async Task LogoutAsync()
+        {
+            await Application.Current.MainPage.Navigation.PushModalAsync(new LogoutView());
+        }
+
         private async void GetCategories()
         {
             var data = await new CategoryDataService().GetCategoriesAsync();
             Categories.Clear();
-            foreach(var item in data)
+            foreach (var item in data)
             {
                 Categories.Add(item);
             }
@@ -83,6 +127,5 @@ namespace App2.ViewModel
                 LatestItems.Add(item);
             }
         }
-
     }
 }

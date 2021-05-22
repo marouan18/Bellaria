@@ -54,5 +54,15 @@ namespace App2.Services
             }
             return LatestFoodItem;
         }
+        public async Task<ObservableCollection<FoodItem>> GetFoodItemsByQueryAsync(string searchText)
+        {
+            var foodItemsByQuery = new ObservableCollection<FoodItem>();
+            var items = (await GetFoodItemsAsync()).Where(p => p.Name.Contains(searchText)).ToList();
+            foreach (var item in items)
+            {
+                foodItemsByQuery.Add(item);
+            }
+            return foodItemsByQuery;
+        }
     }
 }

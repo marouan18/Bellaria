@@ -99,7 +99,7 @@ namespace App2.ViewModel
             try
             {
                 IsBusy = true;
-                var userService = new userservice();
+                var userService = new Userservice();
                 //var userService = DependencyService.Get<IUserService>();
                 Result = await userService.RegisterUser(Username, Password);
                 if (Result)
@@ -126,7 +126,7 @@ namespace App2.ViewModel
             try
             {
                 IsBusy = true;
-                var userService = new userservice();
+                var userService = new Userservice();
                // var userService = DependencyService.Get<IUserService>();
                 Result = await userService.LoginUser(Username, Password);
                 if( Result)

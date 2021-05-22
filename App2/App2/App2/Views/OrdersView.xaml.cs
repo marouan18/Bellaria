@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,15 +15,18 @@ namespace App2.Views
         public OrdersView(string id)
         {
             InitializeComponent();
+            LabelName.Text = "Welcome " + Preferences.Get("Username", "Guest") + ",";
+            LabelOrderID.Text = id;
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PopModalAsync();
         }
 
-        private void ImageButton_Clicked(object sender, EventArgs e)
+        private async void ImageButton_Clicked(object sender, EventArgs e)
         {
+            await Navigation.PushModalAsync(new ProductsView());
 
         }
     }

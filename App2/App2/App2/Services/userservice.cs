@@ -12,11 +12,11 @@ using System.Threading.Tasks;
 namespace App2.Services
 {
 
-    class userservice 
+    class Userservice 
     {
         FirebaseClient client;
 
-        public userservice()
+        public Userservice()
         {
             client = new FirebaseClient("https://bellaria-10f58-default-rtdb.europe-west1.firebasedatabase.app/");
         }
@@ -24,7 +24,7 @@ namespace App2.Services
         public async Task<bool> IsUserExists(string uname)
         {
             var user = (await client.Child("Users")
-                .OnceAsync<user>()).Where(u => u.Object.username== uname).FirstOrDefault();
+                .OnceAsync<User>()).Where(u => u.Object.Username== uname).FirstOrDefault();
 
             return (user != null);
         }
@@ -34,10 +34,10 @@ namespace App2.Services
             if (await IsUserExists(uname) == false)
             {
                 await client.Child("Users")
-                    .PostAsync(new user()
+                    .PostAsync(new User()
                     {
-                        username = uname,
-                        password = passwd
+                        Username = uname,
+                        Password = passwd
                     });
                 return true;
             }
@@ -50,8 +50,8 @@ namespace App2.Services
         public async Task<bool> LoginUser(string uname, string passwd)
         {
             var user = (await client.Child("Users")
-                .OnceAsync<user>()).Where(u => u.Object.username == uname)
-                .Where(u => u.Object.password == passwd).FirstOrDefault();
+                .OnceAsync<User>()).Where(u => u.Object.Username == uname)
+                .Where(u => u.Object.Password == passwd).FirstOrDefault();
 
             return (user != null);
         }

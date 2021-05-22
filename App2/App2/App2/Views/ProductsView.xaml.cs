@@ -20,7 +20,7 @@ namespace App2.Views
 
 
 
-        private async void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        async void CollectionView_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
         {
             var category = e.CurrentSelection.FirstOrDefault() as Category;
             if (category == null)
@@ -28,6 +28,16 @@ namespace App2.Views
 
             await Navigation.PushModalAsync(new CategoryView(category));
 
+            ((CollectionView)sender).SelectedItem = null;
+        }
+
+
+        async void CV_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
+        {
+            var selectedProduct = e.CurrentSelection.FirstOrDefault() as FoodItem;
+            if (selectedProduct == null)
+                return;
+            await Navigation.PushModalAsync(new ProductDetailsView(selectedProduct));
             ((CollectionView)sender).SelectedItem = null;
         }
     }

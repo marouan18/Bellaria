@@ -9,5 +9,6 @@ namespace App2.Model
         public string OrderId { get; set; }
         public string Username { get; set; }
         public decimal TotalCost { get; set; }
+        public string ReceiptId { get; set; }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ouadi\\OneDrive\\Desktop\\Esame\\App2\\App2\\App2.Android\\App2.Android.csproj": {}
+    "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2.Android\\App2.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ouadi\\OneDrive\\Desktop\\Esame\\App2\\App2\\App2.Android\\App2.Android.csproj": {
+    "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2.Android\\App2.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Esame\\App2\\App2\\App2.Android\\App2.Android.csproj",
+        "projectUniqueName": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2.Android\\App2.Android.csproj",
         "projectName": "App2.Android",
-        "projectPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Esame\\App2\\App2\\App2.Android\\App2.Android.csproj",
+        "projectPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2.Android\\App2.Android.csproj",
         "packagesPath": "C:\\Users\\ouadi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Esame\\App2\\App2\\App2.Android\\obj\\",
+        "outputPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -23,28 +23,36 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "monoandroid11.0"
+          "monoandroid10.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "monoandroid11.0": {
+          "monoandroid10.0": {
             "projectReferences": {
-              "C:\\Users\\ouadi\\OneDrive\\Desktop\\Esame\\App2\\App2\\App2\\App2.csproj": {
-                "projectPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Esame\\App2\\App2\\App2\\App2.csproj"
+              "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2\\App2.csproj": {
+                "projectPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2\\App2.csproj"
               }
             }
           }
         }
       },
       "frameworks": {
-        "monoandroid11.0": {
+        "monoandroid10.0": {
           "dependencies": {
             "FirebaseDatabase.net": {
               "target": "Package",
               "version": "[4.0.6, )"
+            },
+            "Xamarin.Android.Support.Design": {
+              "target": "Package",
+              "version": "[28.0.0, )"
+            },
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
@@ -61,19 +69,23 @@
             "Xamarin.Forms.Visual.Material": {
               "target": "Package",
               "version": "[5.0.0.2012, )"
+            },
+            "Xamarin.Plugin.SharedTransitions": {
+              "target": "Package",
+              "version": "[2.4.0, )"
             }
           }
         }
       }
     },
-    "C:\\Users\\ouadi\\OneDrive\\Desktop\\Esame\\App2\\App2\\App2\\App2.csproj": {
+    "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2\\App2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Esame\\App2\\App2\\App2\\App2.csproj",
+        "projectUniqueName": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2\\App2.csproj",
         "projectName": "App2",
-        "projectPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Esame\\App2\\App2\\App2\\App2.csproj",
+        "projectPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2\\App2.csproj",
         "packagesPath": "C:\\Users\\ouadi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Esame\\App2\\App2\\App2\\obj\\",
+        "outputPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -116,9 +128,17 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "System.ComponentModel": {
               "target": "Package",
               "version": "[4.3.0, )"
+            },
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
@@ -135,6 +155,14 @@
             "Xamarin.Forms.Visual.Material": {
               "target": "Package",
               "version": "[5.0.0.2012, )"
+            },
+            "Xamarin.Judopay": {
+              "target": "Package",
+              "version": "[5.4.0, )"
+            },
+            "Xamarin.Plugin.SharedTransitions": {
+              "target": "Package",
+              "version": "[2.4.0, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",

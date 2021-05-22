@@ -4,7 +4,7 @@ using System.Text;
 
 namespace App2.Model
 {
-    class OrderDetails
+   public class OrderDetails
     {
         public string OrderDetailId { get; set; }
         public string OrderId { get; set; }

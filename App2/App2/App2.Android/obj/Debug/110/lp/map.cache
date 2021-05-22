@@ -1,4 +1,5 @@
 FormsViewGroup.dll
+Plugin.SharedTransitions.dll
 SQLitePCLRaw.lib.e_sqlite3.android.dll
 Xamarin.AndroidX.Activity.dll
 Xamarin.AndroidX.Annotation.dll
@@ -43,6 +44,7 @@ Xamarin.AndroidX.VectorDrawable.dll
 Xamarin.AndroidX.VersionedParcelable.dll
 Xamarin.AndroidX.ViewPager.dll
 Xamarin.AndroidX.ViewPager2.dll
+Xamarin.CommunityToolkit.dll
 Xamarin.Essentials.dll
 Xamarin.Forms.Material.dll
 Xamarin.Forms.PancakeView.dll
@@ -77,12 +79,12 @@ androidx.appcompat.appcompat-resources.aar
 androidx.appcompat.appcompat.aar
 androidx.annotation.annotation-experimental.aar
 com.google.android.material.material.aar
-androidx.lifecycle.lifecycle-livedata.aar
 androidx.swiperefreshlayout.swiperefreshlayout.aar
 androidx.slidingpanelayout.slidingpanelayout.aar
 androidx.print.print.aar
 androidx.media.media.aar
 androidx.localbroadcastmanager.localbroadcastmanager.aar
+androidx.lifecycle.lifecycle-livedata.aar
 androidx.documentfile.documentfile.aar
 androidx.legacy.legacy-support-core-utils.aar
 androidx.asynclayoutinflater.asynclayoutinflater.aar
