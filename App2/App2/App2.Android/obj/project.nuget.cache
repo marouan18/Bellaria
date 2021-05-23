@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RgYsLBw8wZRetMMQx4vzLwyIC3ulqd5m4CJCx+CJbLrOvbTbxn3KpuoKUtIOHoNGRiKzUaVwW587MLYOLXeBDQ==",
+  "dgSpecHash": "NrDaMwEiC2Uzbrefo8kIJJgLlIhDxocxe6jhWUcKHQye2IanRMMGo/4Vco2K2YqGetpYcijnIR5x5cNaRmNVtQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2.Android\\App2.Android.csproj",
+  "projectFilePath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria2\\App2\\App2\\App2.Android\\App2.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ouadi\\.nuget\\packages\\firebasedatabase.net\\4.0.6\\firebasedatabase.net.4.0.6.nupkg.sha512",
     "C:\\Users\\ouadi\\.nuget\\packages\\fluentvalidation\\8.1.2\\fluentvalidation.8.1.2.nupkg.sha512",

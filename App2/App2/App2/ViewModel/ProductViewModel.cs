@@ -91,6 +91,7 @@ namespace App2.ViewModel
         {
             await Application.Current.MainPage.Navigation.PushModalAsync(
                 new SearchResultsView(SearchText));
+        //    await Application.Current.MainPage.DisplayAlert("Success", "User Registered", "OK");
         }
 
         private async Task ViewOrderHistoryAsync()

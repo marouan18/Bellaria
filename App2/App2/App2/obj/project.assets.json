@@ -6404,11 +6404,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2\\App2.csproj",
+      "projectUniqueName": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria2\\App2\\App2\\App2\\App2.csproj",
       "projectName": "App2",
-      "projectPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2\\App2.csproj",
+      "projectPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria2\\App2\\App2\\App2\\App2.csproj",
       "packagesPath": "C:\\Users\\ouadi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2\\obj\\",
+      "outputPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria2\\App2\\App2\\App2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

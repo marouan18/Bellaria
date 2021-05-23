@@ -21,7 +21,7 @@
             <Label Text="Burger Queen" FontSize="40" TextColor="WhiteSmoke"
                    FontFamily="CabinSketch" HorizontalOptions="Center" VerticalOptions="Start" />
 
-            <Label x:Name="LabelName" FontSize="Subtitle" Margin="20,0" TextColor="WhiteSmoke"
+            <Label x:Name="LabelName"  FontSize="Subtitle" Margin="20,0" TextColor="WhiteSmoke"
                    HorizontalOptions="Center" VerticalOptions="End" />
 
             <pancake:PancakeView BackgroundColor="WhiteSmoke" CornerRadius="40,40,0,0"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2.Android\\App2.Android.csproj": {}
+    "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria2\\App2\\App2\\App2.Android\\App2.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2.Android\\App2.Android.csproj": {
+    "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria2\\App2\\App2\\App2.Android\\App2.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2.Android\\App2.Android.csproj",
+        "projectUniqueName": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria2\\App2\\App2\\App2.Android\\App2.Android.csproj",
         "projectName": "App2.Android",
-        "projectPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2.Android\\App2.Android.csproj",
+        "projectPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria2\\App2\\App2\\App2.Android\\App2.Android.csproj",
         "packagesPath": "C:\\Users\\ouadi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2.Android\\obj\\",
+        "outputPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria2\\App2\\App2\\App2.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid10.0": {
             "projectReferences": {
-              "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2\\App2.csproj": {
-                "projectPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2\\App2.csproj"
+              "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria2\\App2\\App2\\App2\\App2.csproj": {
+                "projectPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria2\\App2\\App2\\App2\\App2.csproj"
               }
             }
           }
@@ -78,14 +78,14 @@
         }
       }
     },
-    "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2\\App2.csproj": {
+    "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria2\\App2\\App2\\App2\\App2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2\\App2.csproj",
+        "projectUniqueName": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria2\\App2\\App2\\App2\\App2.csproj",
         "projectName": "App2",
-        "projectPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2\\App2.csproj",
+        "projectPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria2\\App2\\App2\\App2\\App2.csproj",
         "packagesPath": "C:\\Users\\ouadi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria\\App2\\App2\\App2\\obj\\",
+        "outputPath": "C:\\Users\\ouadi\\OneDrive\\Desktop\\Bellaria2\\App2\\App2\\App2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

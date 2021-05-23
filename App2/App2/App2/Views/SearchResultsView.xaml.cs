@@ -12,14 +12,14 @@ namespace App2.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SearchResultsView : ContentPage
     {
-        SearchResultsViewModel srvm;
+         SearchResultsViewModel srvm;
         public SearchResultsView(string searchText)
         {
             InitializeComponent();
             srvm = new SearchResultsViewModel(searchText);
             this.BindingContext = srvm;
             LabelName.Text = $"Welcome {Preferences.Get("Username", "Guest")}";
-
+             //Application.Current.MainPage.DisplayAlert("Success", "User Registered", "OK");
         }
 
         private async void ImageButton_Clicked(object sender, EventArgs e)

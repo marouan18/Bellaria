@@ -23,12 +23,13 @@ namespace App2.Views
         async void CollectionView_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
         {
             var category = e.CurrentSelection.FirstOrDefault() as Category;
-            if (category == null)
-                return;
+            if (category != null)
+            {
 
-            await Navigation.PushModalAsync(new CategoryView(category));
+                await Navigation.PushModalAsync(new CategoryView(category));
 
-            ((CollectionView)sender).SelectedItem = null;
+                ((CollectionView)sender).SelectedItem = null;
+            }
         }
 
 
