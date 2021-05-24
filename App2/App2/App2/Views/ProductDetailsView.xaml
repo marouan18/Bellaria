@@ -18,8 +18,8 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <Image Grid.Row="0" Source="{Binding SelectedFoodItem.ImageUrl}"
-                   Aspect="AspectFill" VerticalOptions="Start" />
+            <Image Grid.Row="0" Source="{Binding SelectedFoodItem.ImageUrl}" 
+                   Aspect="AspectFill" VerticalOptions="Start" HeightRequest="300" />
             <Label HorizontalTextAlignment="Center" Grid.Row="1" Text="{Binding SelectedFoodItem.Name}"
                    Style="{StaticResource PrimaryLabelHeader}"
                    Margin="0,20,0,0" />

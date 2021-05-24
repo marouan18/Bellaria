@@ -30,6 +30,21 @@ namespace App2.ViewModel
             }
         }
 
+        private int _TotalFoodItems;
+        public int TotalFoodItems
+        {
+            set
+            {
+                _TotalFoodItems = value;
+                OnPropertyChanged();
+            }
+
+            get
+            {
+                return _TotalFoodItems;
+            }
+        }
+
         public Command PlaceOrdersCommand { get; set; }
 
         public CartViewModel()
@@ -66,6 +81,7 @@ namespace App2.ViewModel
                 });
                 TotalCost += (item.Price * item.Quantity);
             }
+            TotalFoodItems = CartItems.Count;
         }
     }
 }

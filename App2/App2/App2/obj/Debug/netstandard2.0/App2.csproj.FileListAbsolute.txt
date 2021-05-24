@@ -151,3 +151,4 @@ C:\Users\m_inf_5h\Desktop\Bellaria-main\Bellaria\App2\App2\App2\obj\Debug\netsta
 C:\Users\m_inf_5h\Desktop\Bellaria-main\Bellaria\App2\App2\App2\obj\Debug\netstandard2.0\Themes\LightTheme.xaml.g.cs
 C:\Users\m_inf_5h\Desktop\Bellaria-main\Bellaria\App2\App2\App2\obj\Debug\netstandard2.0\Views\OrdersHistoryView.xaml.g.cs
 C:\Users\m_inf_5h\Desktop\Bellaria-main\Bellaria\App2\App2\App2\obj\Debug\netstandard2.0\Views\SearchResultsView.xaml.g.cs
+C:\Users\ouadi\OneDrive\Desktop\Bellaria2\App2\App2\App2\obj\Debug\netstandard2.0\App2.csprojAssemblyReference.cache

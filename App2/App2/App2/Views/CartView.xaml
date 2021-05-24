@@ -12,9 +12,9 @@
         <vm:CartViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <Grid BackgroundColor="{AppThemeBinding Light={StaticResource LightSecondaryBackgroundColor}, Dark={StaticResource DarkSecondaryBackgroundColor}}">
+        <Grid BackgroundColor="#ffebcc">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100" />
+                <RowDefinition Height="180"  />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -22,20 +22,20 @@
 
             <BoxView Grid.Row="0" />
 
-            <Label Text="Burger Quee" FontSize="40" Style="{StaticResource PrimaryLabel}"
-                   FontFamily="CabinSketch"
+            <Label Text="Burger Queen" FontSize="40" FontAttributes="Bold" Style="{StaticResource PrimaryLabel}"
+                   FontFamily="CabinSketch" TextColor="#982222"
                    HorizontalOptions="Center" VerticalOptions="Center" />
 
             <Label x:Name="LabelName" FontSize="Subtitle" Style="{StaticResource PrimaryLabel}"
                    HorizontalOptions="Center" VerticalOptions="End" />
-
-            <ImageButton Source="{FontImage FontFamily=FontAwesome,
-                Glyph={x:Static helpers:IconFont.ArrowLeft}, Size=30, Color=White}"
-                Grid.Row="0" HorizontalOptions="Start" Aspect="AspectFit"
-                VerticalOptions="Start" Margin="10,30" Clicked="ImageButton_Clicked" />
-
-            <pancake:PancakeView Grid.Row="2" CornerRadius="30"
-                                 BackgroundColor="#ffebcc"
+            <Label   TextColor="White"  Grid.Row="0" HorizontalOptions="Start"  VerticalOptions="Start" Text="{x:Static helpers:FontAwesomeIcons.ArrowAltCircleLeft}" FontFamily="{StaticResource FontAwesomeSolid}" FontSize="30"
+                        Margin="10,30">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer  Tapped="ImageButton_Clicked" />
+                </Label.GestureRecognizers>
+            </Label>
+            <pancake:PancakeView Grid.Row="1" CornerRadius="30"
+                                 BackgroundColor="#cc6600"
                                  Margin="0,-40">
                 <Grid Padding="25,30">
                     <Grid.ColumnDefinitions>
@@ -47,16 +47,10 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
-                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding TotalFoodItems,
+                    <Label Grid.Row="0"  Grid.Column="0" Text="{Binding TotalFoodItems,
                         StringFormat='{0} Total Items'}" FontAttributes="Bold" FontSize="18"
-                        TextColor="{AppThemeBinding Light={StaticResource LightPrimaryTextColor}, Dark={StaticResource DarkPrimaryTextColor}}"
+                        TextColor="White"
                         />
-                    <Label   TextColor="Black"  Grid.Row="0" Grid.Column="1" Text="{x:Static helpers:FontAwesomeIcons.Sort}" FontFamily="{StaticResource FontAwesomeSolid}" FontSize="30"
-                        >
-
-                    </Label>
-
-
 
                     <CollectionView ItemsSource="{Binding CartItems}"
                                     VerticalOptions="Start"
@@ -89,7 +83,7 @@
                                             <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"
                                                    Text="{Binding ProductName}" FontSize="15" FontAttributes="Bold" />
                                             <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
-                                                   Text="{Binding CartItemId}" FontSize="15"
+                                                   Text="{Binding CartItemId}" FontSize="25"
                                                    TextColor="#a4a7b6" />
 
                                             <Image Grid.Row="0" Grid.Column="2" Source="{Binding HomeSelected}"
@@ -102,14 +96,18 @@
                     </CollectionView>
                 </Grid>
             </pancake:PancakeView>
-            <Label Text="{Binding TotalCost, StringFormat='Total Cost {0:c}'}"
-                   Grid.Row="2" HorizontalTextAlignment="End" FontSize="Subtitle"
-                   TextColor="{AppThemeBinding Light={StaticResource LightPrimaryTextColor}, Dark={StaticResource DarkPrimaryTextColor}}" />
+            <Label Text="Total Cost"  Grid.Row="2" HorizontalTextAlignment="Center" 
+                   Margin="-10" FontSize="Medium" 
+                   TextColor="White"/>
+            <Label Text="{Binding TotalCost, StringFormat='{0:c}'}"
+                   Grid.Row="3" HorizontalTextAlignment="Center" 
+                   Margin="0" FontSize="Medium" 
+                   TextColor="White" />
 
-            <Button Text="Place Order" Grid.Row="3" TextColor="White"
-                    Command="{Binding PlaceOrdersCommand}"
-                    HorizontalOptions="Center" CornerRadius="20"
-                    BackgroundColor="{AppThemeBinding Light={StaticResource LightDefaultButtonColor}, Dark={StaticResource DarkDefaultButtonColor}}"/>
+            <Button Text="Ordina" Grid.Row="3" Grid.Column="0" Padding="10,10,10,10" Margin="40" TextColor="white"
+                    Command="{Binding PlaceOrdersCommand}" FontSize="Medium"
+                    HorizontalOptions="Center" CornerRadius="20" 
+                    BackgroundColor="#800000"/>
 
         </Grid>
     </ContentPage.Content>
