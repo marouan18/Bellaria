@@ -20,14 +20,15 @@ namespace App2.Views
 
         private async  void  ButtonProducts_Clicked(object sender, EventArgs e)
         {
-            var acd = new AddCategoryData();
-            await acd.AddCategoriesAsync();
+            var afd = new AddFoodItemsData();
+            await afd.AddFoodItemAsync();
         }
 
         private async void ButtonCategories_Clicked(object sender, EventArgs e)
         {
-            var afd = new AddFoodItemsData();
-            await afd.AddFoodItemAsync();
+           
+            var acd = new AddCategoryData();
+            await acd.AddCategoriesAsync();
         }
 
         private void ButtonCart_Clicked(object sender, EventArgs e)

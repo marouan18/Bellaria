@@ -16,13 +16,15 @@
                    Aspect="AspectFit" VerticalOptions="Start" />
             <Label Grid.Row="1" Text="{Binding SelectedCategory.CategoryName}" TextColor="White"
                    FontAttributes="Bold" FontSize="35" Margin="25,-85,0,0" />
-            <ImageButton Source="{FontImage FontFamily=FontAwesome,
-                Glyph={x:Static helpers:IconFont.ArrowLeft}, Size=30, Color=White}"
-                         Grid.Row="0" HorizontalOptions="Start" Aspect="AspectFit"
-                         VerticalOptions="Start" Margin="10,30" Clicked="ImageButton_Clicked" />
+            <Label   TextColor="White"  Grid.Row="0" HorizontalOptions="Start"  VerticalOptions="Start" Text="{x:Static helpers:FontAwesomeIcons.ArrowAltCircleLeft}" FontFamily="{StaticResource FontAwesomeSolid}" FontSize="30"
+                        Margin="10,30">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer  Tapped="ImageButton_Clicked" />
+                </Label.GestureRecognizers>
+            </Label>
 
             <pancake:PancakeView Grid.Row="2" CornerRadius="30"
-                                 BackgroundColor="{AppThemeBinding Light={StaticResource LightSecondaryBackgroundColor}, Dark={StaticResource DarkSecondaryBackgroundColor}}"
+                                 BackgroundColor="#ffebcc"
                                  Margin="0,-40">
                 <Grid Padding="25,30">
                     <Grid.ColumnDefinitions>
@@ -38,9 +40,12 @@
                         StringFormat='{0} Total Items'}" FontAttributes="Bold" FontSize="18"
                         TextColor="{AppThemeBinding Light={StaticResource LightPrimaryTextColor}, Dark={StaticResource DarkPrimaryTextColor}}"
                         />
-                    <ImageButton Grid.Row="0" Grid.Column="1"
-                           Source="{FontImage FontFamily=FontAwesome,
-                Glyph={x:Static helpers:IconFont.SortAscending}, Size=30, Color=Black}" />
+                    <Label   TextColor="Black"  Grid.Row="0" Grid.Column="1" Text="{x:Static helpers:FontAwesomeIcons.Sort}" FontFamily="{StaticResource FontAwesomeSolid}" FontSize="30"
+                        >
+                        
+                    </Label>
+
+                    
 
                     <CollectionView ItemsSource="{Binding FoodItemsByCategory}"
                                     VerticalOptions="Start"

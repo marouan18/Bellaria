@@ -8,7 +8,7 @@
              xmlns:helpers="clr-namespace:App2.Helpers"
              xmlns:vm="clr-namespace:App2.ViewModel"
              x:Class="App2.Views.ProductsView"
-             BackgroundColor="{AppThemeBinding Light={StaticResource LightPageBackgroundColor}, Dark={StaticResource DarkPageBackgroundColor}}">
+             BackgroundColor="White">
     <ContentPage.Resources>
         <Style TargetType="Grid">
             <Setter Property="VisualStateManager.VisualStateGroups">
@@ -18,7 +18,7 @@
                         <VisualState x:Name="Selected">
                             <VisualState.Setters>
                                 <Setter Property="BackgroundColor"
-                                        Value="{AppThemeBinding Light={StaticResource LightPageBackgroundColor}, Dark={StaticResource DarkPageBackgroundColor}}" />
+                                        Value="Black" />
                             </VisualState.Setters>
                         </VisualState>
                     </VisualStateGroup>
@@ -59,8 +59,8 @@
                 <Label Text="{Binding UserName}" Grid.Row="1" Grid.Column="0" FontSize="20"
                        FontAttributes="Bold" Style="{StaticResource PrimaryLabel}" />
 -->
-                <Label Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Text="{x:Static helpers:FontAwesomeIcons.ThList}" FontFamily="{StaticResource FontAwesomeSolid}" FontSize="40"
-                        Margin="0,0,10,0" HorizontalOptions="End">
+                <Label Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" TextColor="Black" Text="{x:Static helpers:FontAwesomeIcons.ThList}" FontFamily="{StaticResource FontAwesomeSolid}" FontSize="30"
+                        Margin="0,0,10,0" HorizontalOptions="Start">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer  Command="{Binding ViewOrdersHistoryCommand}" />
                     </Label.GestureRecognizers>
@@ -72,14 +72,14 @@
                        TextColor="{DynamicResource SecondaryTextColor}"
                        HorizontalTextAlignment="End" VerticalTextAlignment="Start" />
 
-                <Label Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" TextColor="LightGreen" Text="{x:Static helpers:FontAwesomeIcons.ShoppingBag}" FontFamily="{StaticResource FontAwesomeSolid}" FontSize="40"
+                <Label Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" TextColor="Black" Text="{x:Static helpers:FontAwesomeIcons.ShoppingCart}" FontFamily="{StaticResource FontAwesomeSolid}" FontSize="30"
                         Margin="0,0,10,0" HorizontalOptions="End">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding ViewCartCommand}" />
                     </Label.GestureRecognizers>
                 </Label>
 
-                <Label  Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" TextColor="IndianRed" Text="{x:Static helpers:FontAwesomeIcons.SignOutAlt}" FontFamily="{StaticResource FontAwesomeSolid}" FontSize="40"
+                <Label  Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" TextColor="Black" Text="{x:Static helpers:FontAwesomeIcons.SignOutAlt}" FontFamily="{StaticResource FontAwesomeSolid}" FontSize="30"
                         Margin="0,0,10,0" HorizontalOptions="End">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding LogoutCommand}" />
@@ -115,18 +115,18 @@
                             HorizontalScrollBarVisibility="Never"
                             ItemsLayout="HorizontalList"
                             SelectionChanged="CollectionView_SelectionChanged"
-                            SelectionMode="Single"
+                            SelectionMode="Single" BackgroundColor="#ffebcc"
                             Grid.Row="2">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Grid Padding="0,0,15,0">
+                        <Grid Padding="0,6,15,0">
 
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
                             <Frame HeightRequest="50" HasShadow="False"
-                                   BackgroundColor="{DynamicResource DefaultPrimaryColor}"
+                                   BackgroundColor="White"
                                    CornerRadius="10">
                                 <Image Source="{Binding ImageUrl}"
                                        Grid.Row="0"/>

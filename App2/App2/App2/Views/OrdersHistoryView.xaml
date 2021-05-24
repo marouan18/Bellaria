@@ -30,7 +30,7 @@
             <Label x:Name="LabelName" FontSize="Subtitle" Margin="20,0" TextColor="WhiteSmoke"
                    HorizontalOptions="Center" VerticalOptions="End" />
 
-            <pancake:PancakeView BackgroundColor="{AppThemeBinding Light={StaticResource LightInnerBackgroundColor}, Dark={StaticResource DarkInnerBackgroundColor}}"
+            <pancake:PancakeView BackgroundColor="White"
                                  CornerRadius="40,40,0,0"
                                  Grid.Row="1">
                 <Grid>
@@ -57,7 +57,7 @@
                         </CollectionView.EmptyViewTemplate>
                         <CollectionView.GroupHeaderTemplate>
                             <DataTemplate>
-                                <Grid BackgroundColor="LightSlateGray" Padding="2">
+                                <Grid BackgroundColor="#ffb84d" Padding="2">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto" />
                                         <RowDefinition Height="Auto" />
@@ -72,11 +72,11 @@
                         </CollectionView.GroupHeaderTemplate>
                         <CollectionView.GroupFooterTemplate>
                             <DataTemplate>
-                                <StackLayout BackgroundColor="#eeeeee">
+                                <StackLayout BackgroundColor="white">
                                     <Label Text="{Binding TotalCost,StringFormat='Total Cost : {0:c}'}"
                                    TextColor="{AppThemeBinding Light={StaticResource DarkSecondaryBackgroundColor}, Dark={StaticResource DarkSecondaryBackgroundColor}}"
                                    FontAttributes="Bold" />
-                                    <BoxView BackgroundColor="{AppThemeBinding Light={StaticResource LightSecondaryBackgroundColor}, Dark={StaticResource DarkSecondaryBackgroundColor}}"
+                                    <BoxView BackgroundColor="#ffb84d"
                                       HeightRequest="3" />
                                 </StackLayout>
                             </DataTemplate>
@@ -84,8 +84,8 @@
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <Frame Padding="10" HasShadow="False" Margin="10"
-                               BorderColor="LightSlateGray"
-                               BackgroundColor="{AppThemeBinding Light={StaticResource LightSecondaryBackgroundColor}, Dark={StaticResource DarkSecondaryBackgroundColor}}">
+                               BorderColor="Black"
+                               BackgroundColor="White">
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto" />
