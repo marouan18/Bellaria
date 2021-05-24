@@ -80,7 +80,8 @@ namespace App2.ViewModel
                     ProductId = SelectedFoodItem.ProductID,
                     ProductName = SelectedFoodItem.Name,
                     Price = SelectedFoodItem.Price,
-                    Quantity = TotalQuantity
+                    Quantity = TotalQuantity,
+                    Photo=SelectedFoodItem.ImageUrl
                 };
                 var item = cn.Table<CartItem>().ToList()
                     .FirstOrDefault(c => c.ProductId == SelectedFoodItem.ProductID);

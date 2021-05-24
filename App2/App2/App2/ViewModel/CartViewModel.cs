@@ -13,6 +13,7 @@ namespace App2.ViewModel
     {
 
         public ObservableCollection<UserCartItem> CartItems { get; set; }
+        public ObservableCollection<string> Foto{ get; set; }
 
         private decimal _TotalCost;
         public decimal TotalCost
@@ -34,6 +35,7 @@ namespace App2.ViewModel
         public CartViewModel()
         {
             CartItems = new ObservableCollection<UserCartItem>();
+            Foto = new ObservableCollection<string>();
             LoadItems();
             PlaceOrdersCommand = new Command(async () => await PlaceOrdersAsync());
         }
@@ -44,11 +46,14 @@ namespace App2.ViewModel
         }
         private void LoadItems()
         {
+            var Fis = new FoodItemService();
             var cn = DependencyService.Get<ISQLite>().GetConnection();
             var items = cn.Table<CartItem>().ToList();
             CartItems.Clear();
+            Foto.Clear();
             foreach (var item in items)
             {
+                Foto.Add(Fis.GetFoodFotoByProductId(item.ProductId).ToString());
                 CartItems.Add(new UserCartItem()
                 {
                     CartItemId = item.CartItemId,
@@ -56,7 +61,8 @@ namespace App2.ViewModel
                     ProductName = item.ProductName,
                     Price = item.Price,
                     Quantity = item.Quantity,
-                    Cost = item.Price * item.Quantity
+                    Cost = item.Price * item.Quantity,
+                    photo=item.Photo
                 });
                 TotalCost += (item.Price * item.Quantity);
             }

@@ -97,7 +97,7 @@
                     </Button>
 
 
-                    <Label Text="Nuovo Utente :" TextColor="White" FontAttributes="Bold"/>
+                  
 
                     <StackLayout Orientation="Horizontal">
                         <CheckBox x:Name="CheckBoxAgree" VerticalOptions="Center" Color="White"

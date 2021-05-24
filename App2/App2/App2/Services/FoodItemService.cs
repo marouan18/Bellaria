@@ -54,6 +54,11 @@ namespace App2.Services
             }
             return LatestFoodItem;
         }
+        public async Task<string> GetFoodFotoByProductId(int ProductId)
+        {
+            var foto = (await GetFoodItemsAsync()).Where(p => p.ProductID==ProductId).ToList()[0].ImageUrl;
+            return foto;
+        }
         public async Task<ObservableCollection<FoodItem>> GetFoodItemsByQueryAsync(string searchText)
         {
             var foodItemsByQuery = new ObservableCollection<FoodItem>();

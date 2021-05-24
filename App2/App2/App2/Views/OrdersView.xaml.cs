@@ -15,8 +15,8 @@ namespace App2.Views
         public OrdersView(string id)
         {
             InitializeComponent();
-            LabelName.Text = "Welcome " + Preferences.Get("Username", "Guest") + ",";
-            LabelOrderID.Text = id;
+         //   LabelName.Text = "Welcome " + Preferences.Get("Username", "Guest") + ",";
+          //  LabelOrderID.Text = id;
         }
 
         private async void Button_Clicked(object sender, EventArgs e)

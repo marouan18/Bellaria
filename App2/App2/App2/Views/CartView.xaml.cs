@@ -1,4 +1,6 @@
-﻿using System;
+﻿using App2.Model;
+using App2.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +13,7 @@ namespace App2.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CartView : ContentPage
-    {
+    {        
         public CartView()
         {
             InitializeComponent();
