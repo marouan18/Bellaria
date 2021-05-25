@@ -14,7 +14,8 @@ namespace App2
         {
             Device.SetFlags(new string[] {
                 "AppTheme_Experimental",
-                "MediaElement_Experimental"
+                "MediaElement_Experimental",
+                "SwipeView_Experimental"
                 });
             InitializeComponent();
 
@@ -26,8 +27,7 @@ namespace App2
                 MainPage = new Login();
             else
                 MainPage = new ProductsView();
-
-
+            //MainPage = new Page1();
         }
 
         protected override void OnStart()

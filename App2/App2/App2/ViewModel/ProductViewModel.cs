@@ -59,6 +59,7 @@ namespace App2.ViewModel
         }
         public ObservableCollection<Category> Categories { get; set; }
         public ObservableCollection<FoodItem> LatestItems { get; set; }
+        public List<Menu> MyMenu { get; set; }
 
         public Command ViewCartCommand { get; set; }
         public Command LogoutCommand { get; set; }
@@ -74,7 +75,7 @@ namespace App2.ViewModel
                 UserName = uname;
 
             UserCartItemsCount = new CartItemService().GetUsercartCount();
-
+            MyMenu = GetMenus();
             Categories = new ObservableCollection<Category>();
             LatestItems = new ObservableCollection<FoodItem>();
 
@@ -86,7 +87,17 @@ namespace App2.ViewModel
             GetCategories();
             GetLatestItems();
         }
-
+        private List<Menu> GetMenus()
+        {
+            return new List<Menu>
+            {
+                new Menu{ Name = "Home", Icon = "home.png"},
+                new Menu{ Name = "Profile", Icon = "user.png"},
+                new Menu{ Name = "Notifications", Icon = "bell.png"},
+                new Menu{ Name = "Messages", Icon = "envelope.png"},
+                new Menu{ Name = "My Tasks", Icon = "tasks.png"},
+            };
+        }
         private async Task SearchViewAsync()
         {
             await Application.Current.MainPage.Navigation.PushModalAsync(
@@ -129,4 +140,10 @@ namespace App2.ViewModel
             }
         }
     }
+    public class Menu
+    {
+        public string Name { get; set; }
+        public string Icon { get; set; }
+    }
+
 }

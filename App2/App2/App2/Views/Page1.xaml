@@ -1,36 +1,14 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              xmlns:helpers="clr-namespace:App2.Helpers"
-             xmlns:vm="clr-namespace:App2.ViewModel"
-             x:Class="App2.Views.ProductsView"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-             mc:Ignorable="d">
-    <ContentPage.Resources>
-        <Style TargetType="Grid">
-            <Setter Property="VisualStateManager.VisualStateGroups">
-                <VisualStateGroupList>
-                    <VisualStateGroup x:Name="CommonStates">
-                        <VisualState x:Name="Normal" />
-                        <VisualState x:Name="Selected">
-                            <VisualState.Setters>
-                                <Setter Property="BackgroundColor"
-                                        Value="Black" />
-                            </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateGroupList>
-            </Setter>
-        </Style>
-    </ContentPage.Resources>
-    <ContentPage.BindingContext>
-        <vm:ProductViewModel />
-    </ContentPage.BindingContext>
-
-    <ContentPage.Content>
+             mc:Ignorable="d"
+             x:Class="App2.Views.Page1">
+</ContentPage>
+<!--  
     <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <Image Aspect="AspectFill" Source="bg.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
         <BoxView BackgroundColor="#A1A1A1" Opacity="0.9"/>
@@ -80,7 +58,7 @@
                                 </Image.GestureRecognizers>
                             </Image>
                             <Label Text="{Binding UserCartItemsCount}" FontSize="Subtitle"
-                        Grid.Column="2" Grid.RowSpan="2"
+                       Grid.Row="0" Grid.Column="2" Grid.RowSpan="2"
                        TextColor="{DynamicResource SecondaryTextColor}"
                        HorizontalTextAlignment="End" VerticalTextAlignment="Start" />
                             <Label Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" TextColor="Black" Text="{x:Static helpers:FontAwesomeIcons.ShoppingCart}" FontFamily="{StaticResource FontAwesomeSolid}" FontSize="30"
@@ -144,28 +122,29 @@
                             Margin="0,20,10,0" VerticalOptions="Start"
                             VerticalScrollBarVisibility="Never"
                             SelectionMode="Single"
-                            SelectionChanged="CV_SelectionChanged" 
+                            SelectionChanged="CV_SelectionChanged"
                             Grid.Row="4">
                             <CollectionView.ItemTemplate>
-                                    <DataTemplate>
-                                        <Grid >
+                                <DataTemplate>
+                                    <StackLayout Margin="0,15">
+                                        <Grid>
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="Auto" />
                                                 <RowDefinition Height="Auto" />
                                                 <RowDefinition Height="Auto" />
                                             </Grid.RowDefinitions>
 
-                                            <pancake:PancakeView  Grid.Row="0" CornerRadius="20" Margin="0,0,10,0">
-                                                <Image Source="{Binding ImageUrl}" HeightRequest="220"   Aspect="Fill"
+                                            <pancake:PancakeView Grid.Row="0" CornerRadius="20" Margin="0,0,10,0">
+                                                <Image Source="{Binding ImageUrl}" HeightRequest="220" Aspect="Fill"
                                           />
                                             </pancake:PancakeView>
 
-                                            <Frame  Grid.Row="1" Margin="20,-80,20,70" BackgroundColor="{DynamicResource DefaultPrimaryColor}" CornerRadius="15"
+                                            <Frame Grid.Row="1" Margin="20,-80,20,70" BackgroundColor="{DynamicResource DefaultPrimaryColor}" CornerRadius="15"
                                        HorizontalOptions="End" Padding="10,10,10,0"  HeightRequest="35" WidthRequest="70">
                                                 <Label Text="{Binding Price, StringFormat='{0:c}'}" FontSize="Medium"
                                            FontAttributes="Bold"  HeightRequest="15" HorizontalTextAlignment="Center" />
                                             </Frame>
-                                            <Label  Grid.Row="1" Text="{Binding Name}" 
+                                            <Label Grid.Row="1" Text="{Binding Name}" 
                                        VerticalTextAlignment="Center" Style="{StaticResource PrimaryLabelSubHeader}"/>
                                             <Image Grid.Row="2" Source="Star" HorizontalOptions="Start" WidthRequest="20" />
                                             <Label Grid.Row="2" Margin="30,0,0,0" FontSize="15" VerticalOptions="Center">
@@ -179,7 +158,8 @@
                                                 </Label.FormattedText>
                                             </Label>
                                         </Grid>
-                                    </DataTemplate>
+                                    </StackLayout>
+                                </DataTemplate>
                             </CollectionView.ItemTemplate>
                         </CollectionView>
 
@@ -188,5 +168,5 @@
             </Grid>
         </SwipeView>
     </Grid>
-        </ContentPage.Content>
-</ContentPage>
+
+</ContentPage>-->
