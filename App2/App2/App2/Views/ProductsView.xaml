@@ -156,8 +156,7 @@
                                             </Grid.RowDefinitions>
 
                                             <pancake:PancakeView  Grid.Row="0" CornerRadius="20" Margin="0,0,10,0">
-                                                <Image Source="{Binding ImageUrl}" HeightRequest="220"   Aspect="Fill"
-                                          />
+                                                <Image Source="{Binding ImageUrl}" HeightRequest="220"   Aspect="Fill"/>
                                             </pancake:PancakeView>
 
                                             <Frame  Grid.Row="1" Margin="20,-80,20,70" BackgroundColor="{DynamicResource DefaultPrimaryColor}" CornerRadius="15"

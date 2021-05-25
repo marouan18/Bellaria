@@ -19,7 +19,7 @@ namespace App2.Views
         {
             InitializeComponent();
             MyMenu = GetMenus();
-         //   this.BindingContext = this;
+          this.BindingContext = this;
         }
 
         public List<Menu> MyMenu { get; set; }
