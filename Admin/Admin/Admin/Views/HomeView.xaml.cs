@@ -27,7 +27,7 @@ namespace Admin.Views
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             
-            // MainSwipeView.Close();
+             MainSwipeView.Close();
         }
 
         private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
@@ -41,8 +41,11 @@ namespace Admin.Views
             if(l.Text=="Home")
                 MainSwipeView.Close();
             else if(l.Text=="Nuovi Ordini")
-                await Navigation.PushModalAsync(new OldOrdersView(),false);
-           
+                await Navigation.PushModalAsync(new NewOrdersView(),false);
+            else if(l.Text=="Cronologia Ordini")
+                await Navigation.PushModalAsync(new OldOrdersView(), false);
+
+
         }
     }
 

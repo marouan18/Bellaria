@@ -26,7 +26,7 @@ namespace Admin.Services
 
             var orders = (await client.Child("Orders")
                 .OnceAsync<Order>())
-                .Where(o => o.Object.Username.Equals(uname) && o.Object.Confermato == Vecchi)
+                .Where(o => o.Object.Confermato == Vecchi)
                 .Select(o => new Order
                 {
                     OrderId = o.Object.OrderId,

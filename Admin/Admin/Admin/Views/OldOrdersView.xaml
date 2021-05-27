@@ -12,7 +12,7 @@
     <ContentPage.BindingContext>
         <vm:OrdersView >
             <x:Arguments>
-                <x:Boolean>false
+                <x:Boolean>true
                 </x:Boolean>
             </x:Arguments>
         </vm:OrdersView>

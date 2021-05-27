@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Admin.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,24 +8,20 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace App2.Views
+namespace Admin.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LogoutView : ContentPage
+    public partial class OrderDetailsView : ContentPage
     {
-        public LogoutView()
+
+        public OrderDetailsView(string Id)
         {
             InitializeComponent();
+            this.BindingContext = new OrderDetailsModel(Id);
         }
-
         private async void ImageButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
-        }
-
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        {
-
         }
     }
 }

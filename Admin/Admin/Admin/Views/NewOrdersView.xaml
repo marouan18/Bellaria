@@ -7,12 +7,12 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="True"
              x:Class="Admin.Views.NewOrdersView"
-             BackgroundColor="{AppThemeBinding Light={StaticResource LightSecondaryBackgroundColor}, Dark={StaticResource DarkSecondaryBackgroundColor}}"
+             BackgroundColor="#cc6600"
              Visual="Material">
     <ContentPage.BindingContext>
         <vm:OrdersView >
             <x:Arguments>
-                <x:Boolean>true
+                <x:Boolean>false
                 </x:Boolean>
             </x:Arguments>
         </vm:OrdersView>
@@ -51,27 +51,35 @@
 
                     <CollectionView ItemsSource="{Binding OrderDetails}"
                             IsGrouped="True" Margin="25,10,25,0"
+                                    EmptyView=""
                             VerticalScrollBarVisibility="Never">
                         <CollectionView.ItemsLayout>
                             <LinearItemsLayout ItemSpacing="10" Orientation="Vertical"/>
                         </CollectionView.ItemsLayout>
                         <CollectionView.EmptyViewTemplate>
                             <DataTemplate>
-                                <Label Text="No Orders Has Been Placed Yet." />
+                                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Non ci sono ordini" />
                             </DataTemplate>
                         </CollectionView.EmptyViewTemplate>
                         <CollectionView.GroupHeaderTemplate>
                             <DataTemplate>
                                 <Grid BackgroundColor="#ffb84d" Padding="2">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                    </Grid.GestureRecognizers>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto" />
                                         <RowDefinition Height="Auto" />
                                     </Grid.RowDefinitions>
                                     <Label Text="Order Id" HorizontalOptions="Center"
-                                   FontSize="Subtitle" TextColor="White" Grid.Row="0" />
+                                   FontSize="Subtitle" TextColor="White" Grid.Row="0" >
+                                       
+                                    </Label>
                                     <Label Text="{Binding OrderId}" TextColor="White"
                                    Grid.Row="1" HorizontalOptions="Center"
-                                   FontSize="Body"/>
+                                   FontSize="Body">
+                                    
+                                    </Label>
                                 </Grid>
                             </DataTemplate>
                         </CollectionView.GroupHeaderTemplate>

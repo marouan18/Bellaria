@@ -7,7 +7,7 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="True"
              x:Class="App2.Views.OrdersHistoryView"
-             BackgroundColor="{AppThemeBinding Light={StaticResource LightSecondaryBackgroundColor}, Dark={StaticResource DarkSecondaryBackgroundColor}}"
+             BackgroundColor="#cc6600"
              Visual="Material">
     <ContentPage.BindingContext>
         <vm:UserOrdersHistoryViewModel />
@@ -39,12 +39,6 @@
                                  CornerRadius="40,40,0,0"
                                  Grid.Row="1">
                 <Grid>
-                    <!--<ActivityIndicator IsRunning="{Binding IsBusy}"
-                                       WidthRequest="50" HeightRequest="50"
-                                       Color="LimeGreen"
-                                       IsVisible="{Binding IsBusy}"
-                                       HorizontalOptions="Center"
-                                       VerticalOptions="Center" />-->
                     <Image Source="process.gif" HorizontalOptions="Center" VerticalOptions="Center"
                            IsVisible="{Binding IsBusy}"
                            IsAnimationPlaying="True" />

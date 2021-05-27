@@ -18,25 +18,8 @@ namespace App2.Views
         public ProductsView()
         {
             InitializeComponent();
-            MyMenu = GetMenus();
-      //    this.BindingContext = this;
+
         }
-
-        public List<Menu> MyMenu { get; set; }
-
-        private List<Menu> GetMenus()
-        {
-            return new List<Menu>
-            {
-                new Menu{ Name = "Home", Icon = "home.png"},
-                new Menu{ Name = "Profile", Icon = "user.png"},
-                new Menu{ Name = "Notifications", Icon = "bell.png"},
-                new Menu{ Name = "Messages", Icon = "envelope.png"},
-                new Menu{ Name = "My Tasks", Icon = "tasks.png"},
-            };
-        }
-
-
 
         private void OpenSwipe(object sender, EventArgs e)
         {
@@ -47,7 +30,6 @@ namespace App2.Views
         private void CloseSwipe(object sender, EventArgs e)
         {
             MainSwipeView.Close();
-
         }
 
         async void CollectionView_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
@@ -76,22 +58,9 @@ namespace App2.Views
         {
             Label l = (Label)sender;
             if(l.Text=="Cronologia Ordini")
-                await Application.Current.MainPage.Navigation.PushModalAsync(new CartView(),false);
+                await Application.Current.MainPage.Navigation.PushModalAsync(new OrdersHistoryView(),false);
         else if (l.Text=="Logout")
                 await Application.Current.MainPage.Navigation.PushModalAsync(new LogoutView(), false);
         }
-
-        //private void CloseRequested(object sender, EventArgs e)
-        //{
-        //    CloseAnimation();
-        //}
     }
-
-    public class Menu
-    {
-        public string Name { get; set; }
-        public string Icon { get; set; }
-    }
-
-
 }

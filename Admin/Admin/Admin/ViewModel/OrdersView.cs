@@ -30,7 +30,10 @@ namespace Admin.ViewModel
             OrderDetails = new ObservableCollection<UserOrdersHistory>();
             LoadUserOrders(Vecchi);
         }
+      public OrdersView()
+        {
 
+        }
         private async void LoadUserOrders(bool Vecchi)
         {
             try

@@ -17,8 +17,17 @@ namespace Admin.Views
             InitializeComponent();
         }
 
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
+            await Navigation.PopModalAsync();
+        }
+
+        private async void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
+        {
+            Grid g = (Grid)sender;
+            Label l = (Label)g.Children[1];
+            await Navigation.PushModalAsync(new OrderDetailsView(l.Text), false);
+
 
         }
     }

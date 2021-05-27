@@ -5,22 +5,24 @@
              xmlns:helpers="clr-namespace:App2.Helpers"
              xmlns:vm="clr-namespace:App2.ViewModel"
              x:Class="App2.Views.LogoutView"
-             BackgroundColor="{AppThemeBinding Light={StaticResource LightSecondaryBackgroundColor}, Dark={StaticResource DarkSecondaryBackgroundColor}}"
              Visual="Material">
     <ContentPage.BindingContext>
         <vm:LogoutViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <Grid BackgroundColor="{AppThemeBinding Light={StaticResource LightSecondaryBackgroundColor}, Dark={StaticResource DarkSecondaryBackgroundColor}}">
+        <Grid BackgroundColor="#cc6600">
             <Grid.RowDefinitions>
                 <RowDefinition Height="100" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <ImageButton Source="{FontImage FontFamily=FontAwesome,
-                Glyph={x:Static helpers:IconFont.ArrowLeft},Size=30, Color=White}"
-                Grid.Row="0" HorizontalOptions="Start" Aspect="AspectFit"
-                VerticalOptions="Start" Margin="10,30" Clicked="ImageButton_Clicked" />
+
+            <Label  Grid.Row="0" HorizontalOptions="Start"  
+        VerticalOptions="Start" Margin="10,30" TextColor="White" Text="{x:Static helpers:FontAwesomeIcons.ArrowAltCircleLeft}" FontFamily="{StaticResource FontAwesomeSolid}" FontSize="30">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ImageButton_Clicked" />
+                </Label.GestureRecognizers>
+            </Label>
 
             <Label Text="Burger Queen" FontSize="40" Style="{StaticResource PrimaryLabel}"
                    FontFamily="CabinSketch" HorizontalOptions="Center" VerticalOptions="Start" />
@@ -33,22 +35,22 @@
                                 Grid.Row="1">
                 <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
                     <StackLayout IsVisible="{Binding IsCartExists}">
-                        <Label Text="Cart, is not empty!" TextColor="{DynamicResource ContextTextColor}" />
-                        <Label Text="{Binding UserCartItemsCount, StringFormat='Your Cart Contains {0} items'}"
+                        <Label Text="Il carrello non è vuoto" TextColor="{DynamicResource ContextTextColor}" />
+                        <Label Text="{Binding UserCartItemsCount, StringFormat='Il tuo carrello contiene {0} oggetti'}"
                               TextColor="{DynamicResource ContextTextColor}"/>
                     </StackLayout>
 
                     <StackLayout>
-                        <Label Text="Are you sure you wanted to logout ?" TextColor="{DynamicResource ContextTextColor}" />
+                        <Label Text="Sei sicuro di voler effettuare il logout ?" TextColor="{DynamicResource ContextTextColor}" />
                         <StackLayout Orientation="Horizontal" Spacing="10">
-                            <Button Text="Yes, Logout" HorizontalOptions="Center"
-                                   BackgroundColor="{AppThemeBinding Light={StaticResource LightInfoButtonColor}, Dark={StaticResource DarkInfoButtonColor}}"
+                            <Button Text="Sì, Logout" HorizontalOptions="Center"
+                                         BackgroundColor="#800000"
                                    CornerRadius="20"
                                    Command="{Binding LogoutCommand}" />
 
-                            <Button Text="No, Go To Cart" HorizontalOptions="Center"
+                            <Button Text="No, Vai al carrello" HorizontalOptions="Center"
                                     CornerRadius="20"
-                                   BackgroundColor="{AppThemeBinding Light={StaticResource LightInfoButtonColor}, Dark={StaticResource DarkInfoButtonColor}}"
+                                       BackgroundColor="#800000"
                                    Command="{Binding GotoCartCommand}" />
                         </StackLayout>
                     </StackLayout>

@@ -67,7 +67,7 @@ namespace App2.Services
                      await ProcessOrderAsync(receiptId);
                      RemoveItemsFromCart();
                      await Application.Current.MainPage.Navigation.PushModalAsync(
-                         new ProductsView());
+                        new OrdersView(OrderId));
                  }
                  else
                  {
