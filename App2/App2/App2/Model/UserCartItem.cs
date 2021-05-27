@@ -12,6 +12,6 @@ namespace App2.Model
         public decimal Price { get; set; }
         public int Quantity { get; set; }
         public decimal Cost { get; set; }
-        public string photo { get; set; }
+        public string Photo { get; set; }
     }
 }

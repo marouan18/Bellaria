@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Admin.ViewModel"
+              xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="Admin.Views.HomeView">
+    <ContentPage.BindingContext>
+        <vm:HomeViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+            <Image Aspect="AspectFill" Source="bg.jpg" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <BoxView BackgroundColor="#A1A1A1" Opacity="0.9"/>
+            <SwipeView x:Name="MainSwipeView" BackgroundColor="Transparent">
+                <SwipeView.LeftItems>
+                    <SwipeItems>
+                        <SwipeItemView>
+                            <Grid>
+                                <StackLayout Spacing="20" Padding="35" WidthRequest="250" BindableLayout.ItemsSource="{Binding MyMenu}" 
+                                         VerticalOptions="CenterAndExpand">
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackLayout Orientation="Horizontal">
+                                                <StackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                                </StackLayout.GestureRecognizers>
+                                                <pv:PancakeView BackgroundColor="#557ED2" HeightRequest="30" 
+                                                            WidthRequest="30" CornerRadius="15" VerticalOptions="Center" 
+                                                            HorizontalOptions="Start">
+                                                    <Image Source="{Binding Icon}" HeightRequest="15" WidthRequest="15" VerticalOptions="Center" 
+                                                       HorizontalOptions="Center"/>
+                                                </pv:PancakeView>
+                                                <Label Text="{Binding Name}" TextColor="White" FontSize="15" FontAttributes="Bold" 
+                                                   HorizontalOptions="Start" VerticalOptions="Center">
+                                                    <Label.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" />
+                                                    </Label.GestureRecognizers>
+                                                </Label>
+                                            </StackLayout>
+                                        </DataTemplate>
+                                    </BindableLayout.ItemTemplate>
+                                </StackLayout>
+                            </Grid>
+                        </SwipeItemView>
+                    </SwipeItems>
+                </SwipeView.LeftItems>
+                <Grid x:Name="swipeContent">
+                    <pv:PancakeView x:Name="pancake" BackgroundColor="White">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Padding="30">
+                                <Image Source="menu.png" HeightRequest="18"  HorizontalOptions="Start">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <CollectionView ItemsSource="{Binding Images}">
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Image Source="{Binding Immagine}"/>
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+                            </Grid>
+                        </Grid>
+                    </pv:PancakeView>
+                </Grid>
+            </SwipeView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -27,7 +27,7 @@ namespace App2
                 MainPage = new Login();
             else
                 MainPage = new ProductsView();
-            //MainPage = new Page1();
+          //  MainPage = new Page1();
         }
 
         protected override void OnStart()

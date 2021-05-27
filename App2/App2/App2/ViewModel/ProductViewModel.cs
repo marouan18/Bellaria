@@ -93,8 +93,8 @@ namespace App2.ViewModel
             {
                 new Menu{ Name = "Home", Icon = "home.png"},
                 new Menu{ Name = "Profile", Icon = "user.png"},
-                new Menu{ Name = "Notifications", Icon = "bell.png"},
-                new Menu{ Name = "Messages", Icon = "envelope.png"},
+                new Menu{ Name = "Cronologia Ordini", Icon = "bell.png"},
+                new Menu{ Name = "Logout", Icon = "envelope.png"},
                 new Menu{ Name = "My Tasks", Icon = "tasks.png"},
             };
         }

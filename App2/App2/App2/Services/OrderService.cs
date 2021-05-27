@@ -41,7 +41,7 @@ namespace App2.Services
                 Secret = "83302bcbc9c1941b5d0591acd46a4e4e2eb6dba272f63d3884c27d5d363cfbd8",
                 Environment = JudoEnvironment.Sandbox,
                 Amount = TotalCost,
-                Currency = "USD",
+                Currency = "EUR",
                 ConsumerReference = OrderId
             };
 
@@ -60,19 +60,20 @@ namespace App2.Services
             await Application.Current.MainPage.Navigation.PushModalAsync(paymentPage);
             paymentPage.ResultHandler += async (object sender, JudoPayDotNet.Models.IResult<JudoPayDotNet.Models.ITransactionResult> e) =>
             {
-                if ("Success".Equals(e.Response.Result))
-                {
-                    var receiptId = e.Response.ReceiptId.ToString();
-                    await ProcessOrderAsync(receiptId);
-                    RemoveItemsFromCart();
-                    await Application.Current.MainPage.Navigation.PushModalAsync(
-                        new OrdersView(OrderId));
-                }
-                else
-                {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Error While Processing the Payment", "OK");
-                    await Application.Current.MainPage.Navigation.PopModalAsync();
-                }
+                
+                 if ("Success".Equals(e.Response.Result))
+                 {
+                     var receiptId = e.Response.ReceiptId.ToString();
+                     await ProcessOrderAsync(receiptId);
+                     RemoveItemsFromCart();
+                     await Application.Current.MainPage.Navigation.PushModalAsync(
+                         new ProductsView());
+                 }
+                 else
+                 {
+                     await Application.Current.MainPage.DisplayAlert("Error", "Error While Processing the Payment", "OK");
+                     await Application.Current.MainPage.Navigation.PopModalAsync();
+                 }
             };
         }
 
@@ -100,7 +101,8 @@ namespace App2.Services
                     OrderId = OrderId,
                     Username = uname,
                     TotalCost = TotalCost,
-                    ReceiptId = recieptId
+                    ReceiptId = recieptId,
+                    Confermato = false
                 });
         }
 

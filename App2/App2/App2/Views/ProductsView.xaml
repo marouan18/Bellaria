@@ -53,9 +53,13 @@
                                                 <Image Source="{Binding Icon}" HeightRequest="15" WidthRequest="15" VerticalOptions="Center" 
                                                        HorizontalOptions="Center"/>
                                             </pv:PancakeView>
-                                            <Label Text="{Binding Name}" TextColor="White" FontSize="15" FontAttributes="Bold" 
-                                                   HorizontalOptions="Start" VerticalOptions="Center"/>
-                                        </StackLayout>
+                                                <Label Text="{Binding Name}" TextColor="White" FontSize="15" FontAttributes="Bold" 
+                                                   HorizontalOptions="Start" VerticalOptions="Center">
+                                                    <Label.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                                                    </Label.GestureRecognizers>
+                                                </Label>
+                                            </StackLayout>
                                     </DataTemplate>
                                 </BindableLayout.ItemTemplate>
                             </StackLayout>
@@ -131,10 +135,10 @@
                                             <Image Source="{Binding ImageUrl}"
                                        Grid.Row="0"/>
                                         </Frame>
-                                        <Label Text="{Binding CategoryName}"
+                                            <Label Text="{Binding CategoryName}"
                                    HorizontalTextAlignment="Center"
                                    Style="{StaticResource SecondaryLabel}" Grid.Row="1"/>
-                                    </Grid>
+                                        </Grid>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
                         </CollectionView>

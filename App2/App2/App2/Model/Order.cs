@@ -10,5 +10,6 @@ namespace App2.Model
         public string Username { get; set; }
         public decimal TotalCost { get; set; }
         public string ReceiptId { get; set; }
+        public bool Confermato { get; set; }
     }
 }

@@ -12,11 +12,11 @@ namespace App2.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class OrdersView : ContentPage
     {
-        public OrdersView(string id)
+        public OrdersView()
         {
             InitializeComponent();
-         //   LabelName.Text = "Welcome " + Preferences.Get("Username", "Guest") + ",";
-          //  LabelOrderID.Text = id;
+          // LabelName.Text = "Welcome " + Preferences.Get("Username", "Guest") + ",";
+            //LabelOrderID.Text = id;
         }
 
         private async void Button_Clicked(object sender, EventArgs e)

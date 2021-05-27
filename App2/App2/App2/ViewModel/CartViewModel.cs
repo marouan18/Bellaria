@@ -77,7 +77,7 @@ namespace App2.ViewModel
                     Price = item.Price,
                     Quantity = item.Quantity,
                     Cost = item.Price * item.Quantity,
-                    photo=item.Photo
+                    Photo=item.Photo
                 });
                 TotalCost += (item.Price * item.Quantity);
             }

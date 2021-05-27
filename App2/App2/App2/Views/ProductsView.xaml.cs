@@ -19,7 +19,7 @@ namespace App2.Views
         {
             InitializeComponent();
             MyMenu = GetMenus();
-          this.BindingContext = this;
+      //    this.BindingContext = this;
         }
 
         public List<Menu> MyMenu { get; set; }
@@ -70,6 +70,15 @@ namespace App2.Views
                 return;
             await Navigation.PushModalAsync(new ProductDetailsView(selectedProduct));
             ((CollectionView)sender).SelectedItem = null;
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Label l = (Label)sender;
+            if(l.Text=="Cronologia Ordini")
+                await Application.Current.MainPage.Navigation.PushModalAsync(new CartView(),false);
+        else if (l.Text=="Logout")
+                await Application.Current.MainPage.Navigation.PushModalAsync(new LogoutView(), false);
         }
 
         //private void CloseRequested(object sender, EventArgs e)
