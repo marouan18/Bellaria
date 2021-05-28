@@ -29,8 +29,8 @@ namespace Admin.ViewModel
             return new List<Menu>
             {
                 new Menu{ Name = "Home", Icon = "home.png"},
-                new Menu{ Name = "Nuovi Ordini", Icon = "user.png"},
-                new Menu{ Name = "Cronologia Ordini", Icon = "bell.png"},
+                new Menu{ Name = "Nuovi Ordini", Icon = "OrderHistory.png"},
+                new Menu{ Name = "Cronologia Ordini", Icon = "Logout1.png"},
             };
         }
 

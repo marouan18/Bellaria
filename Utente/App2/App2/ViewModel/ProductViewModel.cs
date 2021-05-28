@@ -92,8 +92,8 @@ namespace App2.ViewModel
             return new List<Menu>
             {
                 new Menu{ Name = "Home", Icon = "home.png"},
-                new Menu{ Name = "Cronologia Ordini", Icon = "bell.png"},
-                new Menu{ Name = "Logout", Icon = "envelope.png"},
+                new Menu{ Name = "Cronologia Ordini", Icon = "OrderHistory.png"},
+                new Menu{ Name = "Logout", Icon = "Logout1.png"},
             };
         }
         private async Task SearchViewAsync()

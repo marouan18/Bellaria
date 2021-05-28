@@ -83,11 +83,9 @@
                                             <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"
                                                    Text="{Binding ProductName}" FontSize="15" FontAttributes="Bold" />
                                             <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
-                                                   Text="{Binding CartItemId}" FontSize="25"
+                                                   Text="{Binding Quantity}" FontSize="25"
                                                    TextColor="#a4a7b6" />
 
-                                            <Image Grid.Row="0" Grid.Column="2" Source="{Binding HomeSelected}"
-                                                   HeightRequest="15" />
                                         </Grid>
                                     </Frame>
                                 </StackLayout>
